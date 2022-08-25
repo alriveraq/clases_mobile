@@ -13,6 +13,7 @@ export class AppComponent {
   public imagen: string = this.imagenoriginal;
   public alto: number= 1000;
   public ancho: number= 1000;
+  public mostrarclase: boolean = false
   public img2: string = 'https://wallpaperaccess.com/full/899449.jpg'
   public sumar(n1: number, n2: number): number {
     return n1 + n2;

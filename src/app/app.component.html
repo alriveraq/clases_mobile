@@ -56,3 +56,21 @@
 <input type="number" [value]="ancho" name="ancho" (input)="escucharbajo($event)">
 <br>
 <img [src]="imagen" [height]="alto" [width]="ancho" (click)="cambiarimagen()">
+<h1>NgStyle y Ngclass</h1>
+<button (click)="mostrarclase = !mostrarclase"
+[class.grande] = "mostrarclase" >clickme {{mostrarclase}}</button>
+
+<p [ngClass]="{
+  rojo: mostrarclase,
+  grande:mostrarclase,
+  girar: mostrarclase
+}"
+>
+</p>
+<p
+[class.linearoja]="mostrarclase"></p>
+
+<h2>NgStyle</h2>
+<p [ngStyle]="{
+  'font-size.px': ancho
+}">Soy una humilde p</p>
