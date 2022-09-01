@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public nombre: string = 'Julio';
-  public contador: number = 0;
-  public scroll: number = 0;
   private imagenoriginal: string = 'https://images.cults3d.com/z-xJ1UkRTegVwTSv-41qzLqhIuM=/https://files.cults3d.com/uploaders/13302956/illustration-file/ebe0c95d-9847-4c4d-a07e-0ea938895b5a/Render-Front.PNG'
   public imagen: string = this.imagenoriginal;
   public prota: string = 'https://i.pinimg.com/originals/91/9b/5c/919b5c2121d08bc7e7f5a38cb4582f3a.jpg';
@@ -21,17 +18,8 @@ export class AppComponent {
   public ataque2: boolean = false
   public ataque3: boolean = false
   private img2: string = 'https://i.pinimg.com/736x/7d/d3/23/7dd323a0c2e5ffc2d4867fe8f73fb7e1.jpg'
-  public sumar(n1: number, n2: number): number {
-    return n1 + n2;
-  }
   public eventoBoton(event: Event): void {
     console.log(event);
-  }
-  public aumentarContador(): void {
-    this.contador = this.contador + 1;
-  }
-  public scrollEn(event: Event): void {
-    this.scroll = (event.target as Element).scrollTop;
   }
   public escucharalto(evento: Event): void {
     const elemento = evento.target as HTMLInputElement;
