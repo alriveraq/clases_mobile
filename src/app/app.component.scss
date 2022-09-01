@@ -1,0 +1,70 @@
+.section {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
+
+}
+
+.britanico{
+ background-image: url("http://4.bp.blogspot.com/-doVgIytu3es/VT3yw5SOGPI/AAAAAAAAAMA/erHnHc1LP-k/s1600/golden.jpg");
+ display: block;
+ height: 768px;
+ width: 1024px;
+
+}
+
+.americano{
+  background-image: url("https://superpet.pe/blog/wp-content/uploads/2021/08/Golden-Retriever-La-gui%CC%81a-completa-de-esta-raza-1.jpg");
+  display: block;
+  height: 1080px;
+  width: 1920px;
+
+ }
+
+ .canadiense{
+  background-image: url("https://i0.wp.com/pysnnoticias.com/wp-content/uploads/2020/09/cachorros-golden-retriever.jpg?resize=740%2C555&ssl=1");
+  display: block;
+  height: 555px;
+  width: 740px;
+
+ }
+
+button {
+  height: 50px;
+  padding: 50px;
+}
+
+.rojo {
+  color: red;
+  background-color: linen;
+  border:  2px solid hotpink;
+}
+.grande {
+  display: block;
+  width: 300px;
+  height: 150px;
+}
+
+.linearoja{
+  height: 50px;
+  background-color: black;
+}
+
+.girar{
+  animation: giro 2s linear infinite;
+}
+
+main{
+  text-align: center;
+}
+
+@keyframes giro{
+  to{
+    transform:  rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
