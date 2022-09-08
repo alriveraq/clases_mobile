@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Perros } from 'src/modelos/perros';
 
 @Component({
   selector: 'app-root',
@@ -6,45 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public nombre: string = 'Ignacio';
-  public contador: number = 0;
-  public scroll: number = 0;
-  private imagenoriginal: string = 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Golden_Retriever_9-year_old.jpg'
-  public imagen: string = this.imagenoriginal;
-  public golden: string = 'https://c.tenor.com/Z4KkLLsnfdQAAAAM/air-golden-retriever.gif';
-  public defalto: number= 500;
-  public defancho: number= 226;
-  public alto: number= 0;
-  public ancho: number= 0;
-  public britanico: boolean = false
-  public americano: boolean = false
-  public canadiense: boolean = false
-  private img2: string = 'https://c.tenor.com/62v9g8ReWXsAAAAC/golden-retriever-dog.gif'
-  public sumar(n1: number, n2: number): number {
-    return n1 + n2;
-  }
-  public eventoBoton(event: Event): void {
-    console.log(event);
-  }
-  public aumentarContador(): void {
-    this.contador = this.contador + 1;
-  }
-  public scrollEn(event: Event): void {
-    this.scroll = (event.target as Element).scrollTop;
-  }
-  public escucharalto(evento: Event): void {
-    const elemento = evento.target as HTMLInputElement;
-    this.alto = Number.parseInt(elemento.value);
-  }
-  public escucharbajo(evento: Event): void {
-    const elemento = evento.target as HTMLInputElement
-    this.ancho = Number.parseInt(elemento.value)
-  }
-  public cambiarimagen(): void{
-    if (this.imagen === this.imagenoriginal) {
-      this.imagen = this.img2
-    }else{
-      this.imagen = this.imagenoriginal
+  public listaPerros: Array<Perros> = [
+    {
+      nombre: "Copo",
+      foto: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Racib%C3%B3rz_2007_082.jpg' ,
+      raza: 'Bulldog',
+      color:'Otro',
+      edad: 10
+    },
+    {
+      nombre: "Pedri",
+      foto: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Golden_Retriever_9-year_old.jpg' ,
+      raza: 'Golden',
+      color:'Otro',
+      edad: 11
+    },
+    {
+      nombre: "Firulais",
+      foto: 'https://scontent-scl2-1.xx.fbcdn.net/v/t1.6435-9/60263281_421831861974225_331776474040238080_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7ESUQK4rRIUAX-amTcQ&_nc_ht=scontent-scl2-1.xx&oh=00_AT-VkOWMtDz3ADKTuZLgjj1YeskXiNt3jlPPHFLtuVb02g&oe=63402D60' ,
+      raza: 'Mestizo',
+      color:'Otro',
+      edad: 5
+    },
+    {
+      nombre: "Ghost",
+      foto: 'https://peru21.pe/resizer/WsjYPoz57_xk2-rq094Nm21rfVQ=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/JRINBO53JNCJJJIVTKTUKON3QA.jpg' ,
+      raza: 'Husky',
+      color:'Blanco',
+      edad: 6
     }
-  }
+  ]
+
 }
