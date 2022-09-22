@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>landing</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="https://images.hola.com/imagenes/mascotas/20190426140762/perro-huevo-pompom-gt/0-669-982/portada-pompom-t.jpg">
+      <ion-card-subtitle>-.-</ion-card-subtitle>
+      <ion-card-title>Perrito</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Perrito juzgando con su mirada
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <ion-icon name="alarm-outline" slot="start"></ion-icon>
+      <ion-label>Edad: 5</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="color-fill-outline" slot="start"></ion-icon>
+      <ion-label>Color: Blanco</ion-label>
+    </ion-item>
+
+    <ion-item class="ion-activated">
+      <ion-icon name="speedometer-outline" slot="start"></ion-icon>
+      <ion-label>Peso: 7KG</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="logo-twitch" slot="start"></ion-icon>
+      <ion-label>Twitch: PerritoSlayer2031</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card [routerLink]="['/acerca-de']">
+    <ion-button>Acerca De</ion-button>
+  </ion-card>
+
+</ion-content>
