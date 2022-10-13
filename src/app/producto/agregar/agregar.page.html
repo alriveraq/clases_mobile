@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agregar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  Formulario es valido ={{ formulario.valid }}
+  <form [formGroup]="formulario" >
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="apellido"></ion-input>
+      <ion-note
+       *ngIf="formulario.get('apellido').invalid && formulario.get('apellido').errors && formulario.get('apellido').errors.required && formulario.get('apellido').touched"
+      slot="error">El campo es requerido </ion-note>
+      <ion-note
+       *ngIf="formulario.get('apellido').invalid && formulario.get('apellido').errors && formulario.get('apellido').errors.minlength && formulario.get('apellido').touched"
+      slot="error">minimo 4 caracteres </ion-note>
+      <ion-note
+       *ngIf="formulario.get('apellido').invalid && formulario.get('apellido').errors && formulario.get('apellido').errors.maxlength && formulario.get('apellido').touched"
+      slot="error">Maximo 15 caracteres </ion-note>
+
+    <!-- <pre>
+      {{ formulario.get('apellido').errors | json }}
+      <br>
+      campo tocado ={{ formulario.get('apellido').touched | json }}
+      <br>
+      campo sucio ={{ formulario.get('apellido').dirty | json }}
+      <br>
+      campo valido ={{ formulario.get('apellido').valid | json }}
+    </pre> -->
+
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input type="number" formControlName="precio"></ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>
